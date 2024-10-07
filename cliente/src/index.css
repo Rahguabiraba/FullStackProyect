@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes deleting {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0;
+  }
+}
+
+.typewriter-text {
+  border-right: 2px solid black;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  animation: typing 2s steps(20) 1s forwards, blink 0.5s step-end infinite,
+    deleting 2s steps(20) 4s forwards;
+}
